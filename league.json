@@ -1,0 +1,237 @@
+{
+        "leagueName": "Example League",
+        "emails": [
+                "test@gmail.com",
+                "test2@gmail.com"
+        ],
+        "startDate": "2022-10-17",
+        "bbrefYear": 2023,
+        "teams": [
+                {
+                        "id": "team-steve",
+                        "name": "The Slow Burn",
+                        "owner": "Steve",
+                        "extraTeamDetails": "💲️",
+                        "players": {
+                                "guardOne": {"name": "Shai Gilgeous-Alexander ($31)", "bbrefId": "gilgesh01"},
+                                "guardTwo": {"name": "Tim Hardaway Jr ($3)", "bbrefId": "hardati02"},
+                                "forwardOne": {"name": "Lebron James ($42)", "bbrefId": "jamesle01"},
+                                "forwardTwo": {"name": "Gordon Hayward ($26)", "bbrefId": "haywago01"},
+                                "center": {"name": "Thomas Bryant ($7)", "bbrefId": "bryanth01"},
+                                "reserveGuard": {"name": "Reggie Bullock ($3)", "bbrefId": "bullore01"},
+                                "reserveForward": {"name": "Dorian Finney-Smith ($15)", "bbrefId": "finnedo01"},
+                                "reserveCenter": {"name": "Brook Lopez ($22)", "bbrefId": "lopezbr01"}
+                        },
+                        "transactions": [
+                                { "position": "forwardTwo", "transactionDateString": "2022-12-01", "player": {"bbrefId": "greendr01", "name": "Draymond Green ($24)"}},
+                                { "position": "guardTwo", "transactionDateString": "2022-12-01", "player": {"bbrefId": "meltode01", "name": "DeAnthony Melton ($5)"}}
+                        ]
+                },
+                {
+                        "id": "team-shelby",
+                        "name": "Duren Duren",
+                        "owner": "Shelby",
+                        "extraTeamDetails": "💲",
+                        "players": {
+                                "guardOne": {"name": "Kentavious Caldwell-Pope ($17)", "bbrefId": "caldwke01"},
+                                "guardTwo": {"name": "Kyle Lowry ($24)", "bbrefId": "lowryky01"},
+                                "forwardOne": {"name": "Julius Randle ($26)", "bbrefId": "randlju01"},
+                                "forwardTwo": {"name": "Jaren Jackson Jr ($15)", "bbrefId": "jacksja02"},
+                                "center": {"name": "Beef Stew ($23)", "bbrefId": "stewais01"},
+                                "reserveGuard": {"name": "Jaden Ivey ($15)", "bbrefId": "iveyja01"},
+                                "reserveForward": {"name": "Saddiq Bey ($25)", "bbrefId": "beysa01"},
+                                "reserveCenter": {"name": "Jalen Duren ($5)", "bbrefId": "durenja01"}
+                        },
+                        "transactions": [
+                                { "position": "guardOne", "transactionDateString": "2022-12-01", "player": {"bbrefId": "brownbr01", "name": "Bruce Brown ($17)"}}
+                        ]
+                },
+                {
+                        "id": "team-butch",
+                        "name": "Worst To First",
+                        "owner": "Matt",
+                        "extraTeamDetails": "",
+                        "players": {
+                                "guardOne": {"name": "Jordan Poole ($29)", "bbrefId": "poolejo01"},
+                                "guardTwo": {"name": "Jaden Ivey ($15)", "bbrefId": "iveyja01"},
+                                "forwardOne": {"name": "Paolo Banchero ($28)", "bbrefId": "banchpa01"},
+                                "forwardTwo": {"name": "Zion Williamson ($33)", "bbrefId": "willizi01"},
+                                "center": {"name": "Walker Kessler ($1)", "bbrefId": "kesslwa01"},
+                                "reserveGuard": {"name": "Gary Payton II ($5)", "bbrefId": "paytoga02"},
+                                "reserveForward": {"name": "PJ Tucker ($3)", "bbrefId": "tuckepj01"},
+                                "reserveCenter": {"name": "Deandre Ayton ($35)", "bbrefId": "aytonde01"}
+                        },
+                        "transactions": [
+                                { "position": "center", "transactionDateString": "2023-01-01", "player": {"bbrefId": "bryanth01", "name": "Thomas Bryant ($5)"}},
+                                { "position": "reserveGuard", "transactionDateString": "2023-01-01", "player": {"bbrefId": "leverca01", "name": "Caris LeVert ($1)"}}
+                        ]
+                },
+                {
+                        "id": "team-dad",
+                        "name": "The Bad Boogaloo Boys",
+                        "owner": "Craig",
+                        "extraTeamDetails": "",
+                        "players": {
+                                "guardOne": {"name": "Grayson Allen ($13)", "bbrefId": "allengr01"},
+                                "guardTwo": {"name": "Seth Curry ($5)", "bbrefId": "curryse01"},
+                                "forwardOne": {"name": "Kevin Love ($13)", "bbrefId": "loveke01"},
+                                "forwardTwo": {"name": "Marcus Morris ($9)", "bbrefId": "morrima03"},
+                                "center": {"name": "Nikola Jokic ($68)", "bbrefId": "jokicni01"},
+                                "reserveGuard": {"name": "Cole Anthony ($21)", "bbrefId": "anthoco01"},
+                                "reserveForward": {"name": "Norman Powell ($11)", "bbrefId": "powelno01"},
+                                "reserveCenter": {"name": "Javale McGee ($9)", "bbrefId": "mcgeeja01"}
+                        },
+                        "transactions": [
+                                { "position": "forwardOne", "transactionDateString": "2022-12-01", "player": {"bbrefId": "willigr01", "name": "Grant Williams ($13)"}},
+                                { "position": "reserveGuard", "transactionDateString": "2022-12-01", "player": {"bbrefId": "mathube01", "name": "Benedict Mathurin ($21)"}}
+                        ]
+                },
+                {
+                        "id": "team-karl",
+                        "name": "Teenage Mutant Ninja Turtles",
+                        "owner": "Karl",
+                        "extraTeamDetails": "💲️",
+                        "players": {
+                                "guardOne": {"name": "Cade Cunningham ($36)", "bbrefId": "cunnica01"},
+                                "guardTwo": {"name": "Ja Morant ($38)", "bbrefId": "moranja01"},
+                                "forwardOne": {"name": "Will Barton ($17)", "bbrefId": "bartowi01"},
+                                "forwardTwo": {"name": "De'Andre Hunter ($13)", "bbrefId": "aytonde01"},
+                                "center": {"name": "Jaxson Hayes ($5)", "bbrefId": "hayesja02"},
+                                "reserveGuard": {"name": "Gary Payton II ($5)", "bbrefId": "paytoga02"},
+                                "reserveForward": {"name": "Montrezl Harrel ($1)", "bbrefId": "harremo01"},
+                                "reserveCenter": {"name": "Kristaps Porzingis ($34)", "bbrefId": "porzikr01"}
+                        },
+                        "transactions": [
+                                { "position": "center", "transactionDateString": "2022-12-01", "player": {"bbrefId": "wisemja01", "name": "James Wiseman ($7)"}},
+                                { "position": "forwardOne", "transactionDateString": "2022-12-01", "player": {"bbrefId": "walkelo01", "name": "Lonnie Walker IV ($15)"}},
+                                { "position": "guardOne", "transactionDateString": "2023-01-01", "player": {"bbrefId": "lavinza01", "name": "Zach Lavine ($34)"}},
+                                { "position": "center", "transactionDateString": "2023-01-01", "player": {"bbrefId": "pokusal01", "name": "Aleksej Pokusevski ($9)"}}
+                        ]
+                },
+                {
+                        "id": "team-erich",
+                        "name": "Doginator",
+                        "owner": "Eric H",
+                        "extraTeamDetails": "💲",
+                        "players": {
+                                "guardOne": {"name": "Anfernee Simons ($27)", "bbrefId": "simonan01"},
+                                "guardTwo": {"name": "Jamal Murray ($28)", "bbrefId": "murraja01"},
+                                "forwardOne": {"name": "Zion Williamson ($33)", "bbrefId": "willizi01"},
+                                "forwardTwo": {"name": "De'Andre Hunter ($13)", "bbrefId": "huntede01"},
+                                "center": {"name": "Jaxson Hayes ($5)", "bbrefId": "hayesja02"},
+                                "reserveGuard": {"name": "Devonte Graham ($3)", "bbrefId": "grahade01"},
+                                "reserveForward": {"name": "Tim Hardaway Jr ($3)", "bbrefId": "hardati02"},
+                                "reserveCenter": {"name": "Pascal Siakam ($38)", "bbrefId": "siakapa01"}
+                        },
+                        "transactions": [
+                                { "position": "forwardTwo", "transactionDateString": "2022-12-01", "player": {"bbrefId": "willipa01", "name": "Patrick Williams ($3)"}},
+                                { "position": "center", "transactionDateString": "2022-12-01", "player": {"bbrefId": "clarkbr01", "name": "Brandon Clarke ($13)"}},
+                                { "position": "guardTwo", "transactionDateString": "2023-01-01", "player": {"bbrefId": "paulch01", "name": "Chris Paul ($32)"}},
+                                { "position": "center", "transactionDateString": "2023-01-01", "player": {"bbrefId": "pokusal01", "name": "Aleksej Pokusevski ($9)"}}
+                        ]
+                },
+                {
+                        "id": "team-brad",
+                        "name": "B-Rad Smizzle Whizzle",
+                        "owner": "Brad",
+                        "extraTeamDetails": "💲️",
+                        "players": {
+                                "guardOne": {"name": "Malcolm Brogdon ($21)", "bbrefId": "brogdma01"},
+                                "guardTwo": {"name": "Collin Sexton ($26)", "bbrefId": "sextoco01"},
+                                "forwardOne": {"name": "Cameron Johnson ($21)", "bbrefId": "johnsca02"},
+                                "forwardTwo": {"name": "RJ Barrett ($24)", "bbrefId": "barrerj01"},
+                                "center": {"name": "Mo Bamba ($17)", "bbrefId": "bambamo01"},
+                                "reserveGuard": {"name": "Caris LeVert ($7)", "bbrefId": "leverca01"},
+                                "reserveForward": {"name": "Bogdan Bogdanovic ($19)", "bbrefId": "bogdabo01"},
+                                "reserveCenter": {"name": "Jaren Jackson Jr ($15)", "bbrefId": "jacksja02"}
+                        },
+                        "transactions": [
+                                { "position": "forwardOne", "transactionDateString": "2022-12-01", "player": {"bbrefId": "bogdabo02", "name": "Bojan Bogdanovic ($21)"}},
+                                { "position": "center", "transactionDateString": "2022-12-01", "player": {"bbrefId": "jacksja02", "name": "Jaren Jackson Jr ($15)"}},
+                                { "position": "reserveCenter", "transactionDateString": "2022-12-01", "player": {"bbrefId": "bambamo01", "name": "Mo Bamba ($17)"}}
+                        ]
+                },
+                {
+                        "id": "team-ericn",
+                        "name": "E's Boys That Are Bad",
+                        "owner": "Eric N (with honorary co-captain Dax)",
+                        "extraTeamDetails": "",
+                        "players": {
+                                "guardOne": {"name": "Jalen Brunson ($30)", "bbrefId": "brunsja01"},
+                                "guardTwo": {"name": "Tyrese Maxey ($32)", "bbrefId": "maxeyty01"},
+                                "forwardOne": {"name": "Jonathan Kuminga ($5)", "bbrefId": "kuminjo01"},
+                                "forwardTwo": {"name": "Evan Mobley ($33)", "bbrefId": "mobleev01"},
+                                "center": {"name": "Andre Drummond ($9)", "bbrefId": "drumman01"},
+                                "reserveGuard": {"name": "Ayo Dosunmu ($9)", "bbrefId": "dosunay01"},
+                                "reserveForward": {"name": "Luguentz Dort ($19)", "bbrefId": "dortlu01"},
+                                "reserveCenter": {"name": "James Wiseman ($13)", "bbrefId": "wisemja01"}
+                        },
+                        "transactions": [
+                        ]
+                },
+                {
+                        "id": "team-micah",
+                        "name": "Everyone vs Craig",
+                        "owner": "Micah",
+                        "extraTeamDetails": "",
+                        "players": {
+                                "guardOne": {"name": "Reggie Jackson ($19)", "bbrefId": "jacksre01"},
+                                "guardTwo": {"name": "Luguentz Dort ($19)", "bbrefId": "dortlu01"},
+                                "forwardOne": {"name": "Zion Williamson ($33)", "bbrefId": "willizi01"},
+                                "forwardTwo": {"name": "Lauri Markkanen ($25)", "bbrefId": "markkla01"},
+                                "center": {"name": "James Wiseman ($13)", "bbrefId": "wisemja01"},
+                                "reserveGuard": {"name": "Ayo Dosunmu ($9)", "bbrefId": "dosunay01"},
+                                "reserveForward": {"name": "Bennedict Mathurin ($15)", "bbrefId": "mathube01"},
+                                "reserveCenter": {"name": "Isaiah Hartenstein ($17)", "bbrefId": "harteis01"}
+                        },
+                        "transactions": [
+                                { "position": "center", "transactionDateString": "2022-12-01", "player": {"bbrefId": "drumman01", "name": "Andre Drummond 🐧 ($13)"}},
+                                { "position": "guardOne", "transactionDateString": "2022-12-01", "player": {"bbrefId": "iveyja01", "name": "Jaden Ivey ($19)"}},
+                                { "position": "reserveCenter", "transactionDateString": "2023-01-01", "player": {"bbrefId": "colliza01", "name": "Zach Collins ($15)"}},
+                                { "position": "reserveForward", "transactionDateString": "2023-01-01", "player": {"bbrefId": "dortlu01", "name": "Luguentz Dort ($19)"}},
+                                { "position": "guardTwo", "transactionDateString": "2023-01-01", "player": {"bbrefId": "mathube01", "name": "Bennedict Mathurin ($15)"}}
+                        ]
+                },
+                {
+                        "id": "team-jeff",
+                        "name": "Beef Stew & The Side Dishes",
+                        "owner": "Mr. Jeffrey",
+                        "extraTeamDetails": "💲",
+                        "players": {
+                                "guardOne": {"name": "Kyle Lowry ($24)", "bbrefId": "lowryky01"},
+                                "guardTwo": {"name": "Dillon Brooks ($19)", "bbrefId": "brookdi01"},
+                                "forwardOne": {"name": "Jaren Jackson Jr ($15)", "bbrefId": "jacksja02"},
+                                "forwardTwo": {"name": "'Orange' Julius Randle ($26)", "bbrefId": "randlju01"},
+                                "center": {"name": "BEEF STEW ($23)", "bbrefId": "stewais01"},
+                                "reserveGuard": {"name": "Markelle Fultz ($13)", "bbrefId": "fultzma01"},
+                                "reserveForward": {"name": "Aaron Gordon ($19)", "bbrefId": "gordoaa01"},
+                                "reserveCenter": {"name": "Mason Plumlee ($9)", "bbrefId": "plumlma01"}
+                        },
+                        "transactions": [
+                                { "position": "reserveGuard", "transactionDateString": "2022-12-01", "player": {"bbrefId": "monkma01", "name": "Malik Monk ($13)"}},
+                                { "position": "guardTwo", "transactionDateString": "2023-01-01", "player": {"bbrefId": "monkma01", "name": "Malik Monk ($13)"}},
+                                { "position": "reserveGuard", "transactionDateString": "2023-01-01", "player": {"bbrefId": "brookdi01", "name": "Dillon Brooks ($19)"}}
+                                
+                        ]
+                },
+                {
+                        "id": "team-brett",
+                        "name": "Goon Squad",
+                        "owner": "Brett",
+                        "extraTeamDetails": "💲️",
+                        "players": {
+                                "guardOne": {"name": "Jordan Poole ($29)", "bbrefId": "poolejo01"},
+                                "guardTwo": {"name": "Jaden Ivey ($15)", "bbrefId": "iveyja01"},
+                                "forwardOne": {"name": "Jaren Jackson Jr ($15)", "bbrefId": "jacksja02"},
+                                "forwardTwo": {"name": "Julius Randle ($26)", "bbrefId": "randlju01"},
+                                "center": {"name": "Beef Stew ($23)", "bbrefId": "stewais01"},
+                                "reserveGuard": {"name": "Jalen Suggs ($15)", "bbrefId": "suggsja01"},
+                                "reserveForward": {"name": "De'Andre Hunter ($13)", "bbrefId": "huntede01"},
+                                "reserveCenter": {"name": "Jalen Duren ($5)", "bbrefId": "durenja01"}
+                        },
+                        "transactions": [
+                        ]
+                }
+
+        ]
+}

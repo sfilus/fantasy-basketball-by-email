@@ -1,0 +1,81 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "description": "Layered plot showing categories",
+    "data": {"values": [
+            {"name": "p1", "reb": 2, "ast": 4, "pts": 21, "date": "Dec 1 2021"},
+            {"name": "p1", "reb": 3, "ast": 4, "pts": 20, "date": "Dec 2 2021"},
+            {"name": "p1", "reb": 9, "ast": 3, "pts": 8, "date": "Jan 8 2022"},
+            {"name": "p1", "reb": 2, "ast": 1, "pts": 12, "date": "Jan 9 2022"},
+            {"name": "Karl Anthony Towns", "reb": 2, "ast": 1, "pts": 5, "date": "Dec 1 2021"},
+            {"name": "Karl Anthony Towns", "reb": 5, "ast": 4, "pts": 36, "date": "Jan 9 2022"},
+            {"name": "Draymond Green", "reb": 2, "ast": 1, "pts": 5, "date": "Dec 1 2021"},
+            {"name": "Draymond Green", "reb": 5, "ast": 4, "pts": 3, "date": "Dec 2 2021"},
+            {"name": "Draymond Green", "reb": 5, "ast": 4, "pts": 0, "date" : "Jan 10 2022"},
+            {"name": "Draymond Green", "reb": 5, "ast": 2, "pts": 0, "date" : "Jan 10 2022"},
+            {"name": "Draymond Green", "reb": 5, "ast": 4, "pts": 0, "date" : "Jan 10 2022"}
+        ], 
+        "format": {"parse": {"pts": "number"}}
+    },
+    "repeat": ["pts", "reb", "ast"],
+    "columns": 3,
+    "spec": {
+        "width": 400,
+        "height": 250,
+        "layer": 
+        [
+            {
+                "mark": {
+                    "type": "boxplot",
+                    "extent": "min-max",
+                    "color": "#4b4b4b",
+                    "median": {"color": "#CD5D67"},
+                    "ticks":{"size": 3},
+                    "opacity": 0.4
+                },
+                "transform": [{"calculate": "split(datum.name, ' ')", "as": "formattedName"}],
+                "encoding": {
+                    "x": {
+                        "field": {"repeat": "repeat"},
+                        "type": "quantitative"
+                    },
+                    "y": {
+                        "field": "name",
+                        "type": "nominal",
+                        "axis": {"labelAngle": 0, "labelFontSize": 14}
+                    }
+                }
+            },
+            {
+                    "mark": {"type": "circle", "opacity": 1, "color": "#CD5D67"},
+                    "transform": [
+                        {"calculate": "split(datum.name, ' ')", "as": "formattedName"},
+                        {"filter": 
+                            {
+                                "field": "gameDateString" , 
+                                "range": 
+                                    [
+                                        {"year": 2022, "month": "jan", "date": 1}, 
+                                        {"year": 2022, "month": "jan", "date": 29}
+                                    ]}
+                        }
+                    ],
+                    "encoding": {
+                    "x": {
+                            "field": {
+                                    "repeat": "repeat"
+                            }, 
+                            "axis": {
+                                "titleFontSize": 18,
+                                "titleAngle": 0,
+                                "titleAlign": "center",
+                                "titleX": 200,
+                                "titleY": -275
+                            },
+                            "type": "quantitative"
+                        },
+                    "y": {"field": "name", "title": null, "type": "nominal"}
+                    }
+            }
+            ]
+    }
+  }

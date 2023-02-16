@@ -1,0 +1,22 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Bar Chart with a spacing-saving y-axis",
+  "data": {"values": [
+    {"Name": "steve", "points": 12, "rebounds": 7},
+    {"Name": "shelby", "points": 15, "rebounds": 10},
+    {"Name": "butch", "points": 14, "rebounds": 18}
+  ]},
+  "repeat": [
+      "Points", "Rebounds", "Assists",
+      "Threes", "Steals", "Blocks", 
+      "Turn Overs", "Field Goal %", "Free Throw %"
+    ],
+  "columns": 3,
+  "spec": {
+  "mark": {"type": "bar", "orient": "horizontal", "color": "#4b4b4b"},
+    "encoding": {
+    "x": {"field": {"repeat": "repeat"}, "type": "quantitative"},
+    "y": {"field": "Name", "type": "nominal", "title": null}
+    }
+  }
+}

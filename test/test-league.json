@@ -1,0 +1,45 @@
+{
+        "leagueName": "Fellowship of the League",
+        "emails": [
+            "funkmasterfilus@gmail.com"
+        ],
+        "startDate": "2022-02-23",
+        "bbrefYear": 2022,
+        "teams": [
+                {
+                        "id": "team-steve",
+                        "name": "Gandalf the Bey",
+                        "owner": "Steve",
+                        "players": {
+                                "guardOne": {"name": "Fred VanVleet", "bbrefId": "vanvlfr01"},
+                                "guardTwo": {"name": "Dejounte Murray", "bbrefId": "murrade01"},
+                                "forwardOne": {"name": "Saddiq Bey", "bbrefId": "beysa01"},
+                                "forwardTwo": {"name": "Miles Bridges", "bbrefId": "bridgmi02"},
+                                "center": {"name": "Nikola Jokic", "bbrefId": "jokicni01"},
+                                "reserveGuard": {"name": "Caris Levert", "bbrefId": "leverca01"},
+                                "reserveForward": {"name": "Kelly Oubre", "bbrefId": "oubreke01"},
+                                "reserveCenter": {"name": "Andre Drummond", "bbrefId": "drumman01"}
+                        },
+                        "transactions": [
+                                {"transactionDate": "2022-03-01", "playerName": "Sabonis", "bbrefId": "sabondo01", "position": "center"},
+                                {"transactionDate": "2022-03-01", "playerName": "Jokic", "bbrefId": "jokicni01", "position": "reserveCenter"}
+                        ]
+                },
+                {
+                        "id": "team-butch",
+                        "name": "Mrs. Coates' Lil Accountants",
+                        "owner": "Matt & Brad",
+                        "players": {
+                                "guardOne": {"name": "Russell Westbrook", "bbrefId": "westbru01"},
+                                "guardTwo": {"name": "Lamelo Ball", "bbrefId": "ballla01"},
+                                "forwardOne": {"name": "Khris Middleton", "bbrefId": "middlkh01"},
+                                "forwardTwo": {"name": "Jimmy Butler", "bbrefId": "butleji01"},
+                                "center": {"name": "Domantas Sabonis", "bbrefId": "sabondo01"},
+                                "reserveGuard": {"name": "Caris Levert", "bbrefId": "leverca01"},
+                                "reserveForward": {"name": "Kentavious Caldwell-Pope", "bbrefId": "caldwke01"},
+                                "reserveCenter": {"name": "Andre Drummond", "bbrefId": "drumman01"}
+                        },
+                        "transactions": []
+                }
+        ]
+}

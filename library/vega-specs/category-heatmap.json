@@ -1,0 +1,39 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Category Totals",
+  "data": {"values":[
+    {
+    "team": "one", "category": "ast", "score": 8
+    },
+    {
+    "team": "two", "category": "ast", "score": 4
+    },
+    {
+    "team": "one", "category": "pts", "score": 2
+    },
+    {
+    "team": "two", "category": "pts", "score": 3
+    }
+  ]},
+  "height": 800,
+  "width": 800,
+    "encoding": {
+        "y": {"field": "team", "type": "nominal", "title": null, "sort": {"field": "score", "op":"sum", "order":"descending"}},
+        "x": {"field": "category", "type": "nominal", "title": null, "axis": {"labelAngle": 0}},
+        "color": {
+          "field": "total", 
+          "aggregate": "mean", 
+          "legend": {
+            "title": "Fantasy Points",
+            "titleAnchor":"start",
+            "gradientLength": 140
+          }
+        }
+    },
+    "layer": [
+        {
+            "mark": "rect",
+            "encoding": {"color": {"field": "score", "scale": {"scheme": "greys"}}}
+        }
+    ]
+}

@@ -1,0 +1,4 @@
+.env
+node_modules/
+temp_output/
+.nyc_output/

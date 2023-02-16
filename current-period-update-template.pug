@@ -1,0 +1,334 @@
+html 
+    head 
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width,initial-scale=1")
+        meta(name="x-apple-disable-message-reformatting")
+        title
+    body 
+        table(role="presentation", style="width:800px;border-collapse:collapse;border:1px solid #cccccc;border-spacing:0;text-align:left;background-color:white !important;")
+                tr
+                        td(align="center", style="padding:0;")
+                                div(style="background-color:black;color:white;padding-top:8px;padding-bottom:8px;")
+                                        h1=leagueName
+                tr
+                        td(align="center", style="padding:0;")
+                                h4 League Standings
+
+                tr
+                        td(align="center", style="padding:0;")
+                                div(style="padding-top:8px;padding-bottom:8px;")
+                                        img(src="cid:" + heatmapFilename, width="100%")
+                tr
+                        td(align="center", style="padding:0;")
+                                h4 Last 7 Days Team Totals
+                tr
+                        td(align="center", style="padding:0;")
+                                div(style="padding-top:8px;padding-bottom:8px;")
+                                        img(src="cid:" + barChartFilename, width="100%")
+                tr
+                        td(align="center", style="padding:0;")
+                                table(style="width:100%;padding:0;border-collapse:collapse;") 
+                                        tr(style="background-color:black;color:white;padding-top:6px;padding-bottom:8px;width:800px;")
+                                                td(align="center", style="padding:0;")
+                                                        div(style="width:400px;")
+                                                                h3 Game of the Week
+                                                td(align="center", style="padding:0;")
+                                                        div(style="width:400px;")
+                                                                h3 Player of the Week
+                                        tr 
+                                                td(align="center", style="padding:0;")
+                                                        img(src="https://www.basketball-reference.com/req/202106291/images/players/" + gameOfTheCurrentPeriod.bbrefId + ".jpg", height="92px", width="62px")
+                                                        div(style="font-weight:bold;")=gameOfTheCurrentPeriod.game.name
+                                                        div=gameOfTheCurrentPeriod.game.gameDateObject.format("MMMM D")
+
+                                                        table 
+                                                                tbody
+                                                                        tr
+                                                                                td
+                                                                                        div(style="padding:8px;")
+                                                                                                span(style="font-size:18px;")=gameOfTheCurrentPeriod.game.points
+                                                                                                span(style="color:#696969;padding-left:4px;") pts
+                                                                                td
+                                                                                        div(style="padding:8px;")
+                                                                                                span(style="font-size:18px;")=gameOfTheCurrentPeriod.game.rebounds
+                                                                                                span(style="color:#696969;padding-left:4px;") reb
+                                                                                td
+                                                                                        div(style="padding:8px;")
+                                                                                                span(style="font-size:18px;")=gameOfTheCurrentPeriod.game.assists
+                                                                                                span(style="color:#696969;padding-left:4px;") ast
+                                                                        tr
+                                                                                td
+                                                                                        div(style="padding:8px;")
+                                                                                                span(style="font-size:18px;")=gameOfTheCurrentPeriod.game.threePointers
+                                                                                                span(style="color:#696969;padding-left:4px;") 3p
+                                                                                td
+                                                                                        div(style="padding:8px;")
+                                                                                                span(style="font-size:18px;")=gameOfTheCurrentPeriod.game.steals
+                                                                                                span(style="color:#696969;padding-left:4px;") stl
+                                                                                td
+                                                                                        div(style="padding:8px;")
+                                                                                                span(style="font-size:18px;")=gameOfTheCurrentPeriod.game.blocks
+                                                                                                span(style="color:#696969;padding-left:4px;") blk
+                                                                        tr
+                                                                                td
+                                                                                        div(style="padding:8px;")
+                                                                                                span(style="font-size:18px;")=gameOfTheCurrentPeriod.game.turnOvers
+                                                                                                span(style="color:#696969;padding-left:4px;") to
+                                                                                - var gotyft = gameOfTheCurrentPeriod.game.freeThrowAttempts > 0 ? ((gameOfTheCurrentPeriod.game.freeThrows / gameOfTheCurrentPeriod.game.freeThrowAttempts) * 100).toFixed(1) : "-";
+                                                                                - var gotyfg = gameOfTheCurrentPeriod.game.fieldGoalAttempts > 0 ? ((gameOfTheCurrentPeriod.game.fieldGoals / gameOfTheCurrentPeriod.game.fieldGoalAttempts) * 100).toFixed(1) : "-";
+                                                                                td
+                                                                                        div(style="padding:8px;")
+                                                                                                span(style="font-size:18px;")= gotyfg
+                                                                                                span(style="color:#696969;padding-left:4px;") fg%
+                                                                                td
+                                                                                        div(style="padding:8px;")
+                                                                                                span(style="font-size:18px;")= gotyft
+                                                                                                span(style="color:#696969;padding-left:4px;") ft%
+                                                td(align="center", style="padding:0;")
+                                                        img(src="https://www.basketball-reference.com/req/202106291/images/players/" + playerOfTheCurrentPeriod.bbrefId + ".jpg", height="92px", width="62px")
+                                                        div(style="font-weight:bold;")=playerOfTheCurrentPeriod.playerName
+                                                        div=playerOfTheCurrentPeriod.numGames + " games"
+
+                                                        table 
+                                                                tbody 
+                                                                        tr 
+                                                                                td
+                                                                                        div(style="padding:8px;")
+                                                                                                span(style="font-size:18px;")=playerOfTheCurrentPeriod.averageStats.points.toFixed(1)
+                                                                                                span(style="color:#696969;padding-left:4px;") ppg
+                                                                                td
+                                                                                        div(style="padding:8px;")
+                                                                                                span(style="font-size:18px;")=playerOfTheCurrentPeriod.averageStats.rebounds.toFixed(1)
+                                                                                                span(style="color:#696969;padding-left:4px;") rpg
+                                                                                td
+                                                                                        div(style="padding:8px;")
+                                                                                                span(style="font-size:18px;")=playerOfTheCurrentPeriod.averageStats.assists.toFixed(1)
+                                                                                                span(style="color:#696969;padding-left:4px;") apg
+                                                                        tr
+                                                                                td
+                                                                                        div(style="padding:8px;")
+                                                                                                span(style="font-size:18px;")=playerOfTheCurrentPeriod.averageStats.threePointers.toFixed(1)
+                                                                                                span(style="color:#696969;padding-left:4px;") 3pg
+                                                                                td
+                                                                                        div(style="padding:8px;")
+                                                                                                span(style="font-size:18px;")=playerOfTheCurrentPeriod.averageStats.steals.toFixed(1)
+                                                                                                span(style="color:#696969;padding-left:4px;") spg
+                                                                                td
+                                                                                        div(style="padding:8px;")
+                                                                                                span(style="font-size:18px;")=playerOfTheCurrentPeriod.averageStats.blocks.toFixed(1)
+                                                                                                span(style="color:#696969;padding-left:4px;") bpg
+                                                                        tr
+                                                                                td
+                                                                                        div(style="padding:8px;")
+                                                                                                span(style="font-size:18px;")=playerOfTheCurrentPeriod.averageStats.turnOvers.toFixed(1)
+                                                                                                span(style="color:#696969;padding-left:4px;") topg
+                                                                                td
+                                                                                        div(style="padding:8px;")
+                                                                                                span(style="font-size:18px;")=playerOfTheCurrentPeriod.averageStats["fg%"]
+                                                                                                span(style="color:#696969;padding-left:4px;") fg%
+                                                                                td
+                                                                                        div(style="padding:8px;")
+                                                                                                span(style="font-size:18px;")=playerOfTheCurrentPeriod.averageStats["ft%"]
+                                                                                                span(style="color:#696969;padding-left:4px;") ft%
+                tr
+                        td(align="center", style="padding:0;")
+                                each team, index in teams
+                                        div(style="background-color:black;color:white;padding-top:8px;padding-bottom:6px;margin-top:6px;")
+                                                h3(style="color:white;")= team.standing + ". " + team.name + "  [ " + team.owner + " " + team.extraTeamDetails + " ] " + " - " + team.points + " points"
+                                                h4(style="color:white;")= team.stats.gamesPlayed + " games played"
+
+                                        div(style="padding-top:8px;")
+
+                                        h4 Last 7 Days Team Totals
+                                        table(style="border:1px solid black;border-collapse:collapse;")
+                                                tbody 
+                                                        tr
+                                                                td(style="border:1px solid black;font-weight:bold;") PTS
+                                                                td(style="border:1px solid black;font-weight:bold;") REB
+                                                                td(style="border:1px solid black;font-weight:bold;") AST
+                                                                td(style="border:1px solid black;font-weight:bold;") 3P
+                                                                td(style="border:1px solid black;font-weight:bold;") STL
+                                                                td(style="border:1px solid black;font-weight:bold;") BLK
+                                                                td(style="border:1px solid black;font-weight:bold;") TO
+                                                                td(style="border:1px solid black;font-weight:bold;") FG%
+                                                                td(style="border:1px solid black;font-weight:bold;") FT%
+                                                        tr
+                                                                td(style="border:1px solid black;")= team.stats.points.currentPeriodTotal
+                                                                td(style="border:1px solid black;")= team.stats.rebounds.currentPeriodTotal
+                                                                td(style="border:1px solid black;")= team.stats.assists.currentPeriodTotal
+                                                                td(style="border:1px solid black;")= team.stats.threePointers.currentPeriodTotal
+                                                                td(style="border:1px solid black;")= team.stats.steals.currentPeriodTotal
+                                                                td(style="border:1px solid black;")= team.stats.blocks.currentPeriodTotal
+                                                                td(style="border:1px solid black;")= team.stats.turnOvers.currentPeriodTotal
+
+                                                                if team.stats.fieldGoalAttempts.currentPeriodTotal > 0
+                                                                        td(style="border:1px solid black;")= ((team.stats.fieldGoals.currentPeriodTotal / team.stats.fieldGoalAttempts.currentPeriodTotal) * 100).toFixed(1) + "%"
+                                                                else 
+                                                                        td(style="border:1px solid black;")
+                                                                if team.stats.freeThrowAttempts.currentPeriodTotal > 0
+                                                                        td(style="border:1px solid black;")= ((team.stats.freeThrows.currentPeriodTotal / team.stats.freeThrowAttempts.currentPeriodTotal) * 100).toFixed(1) + "%"
+                                                                else 
+                                                                        td(style="border:1px solid black;")
+
+                                        
+                                        //- START LAST 7 DAYS STARTERS
+                                        h4 Last 7 Days Game Log - Starters
+
+                                        - var gameLogCounter = 0
+                                        table(style="border:1px solid black;border-collapse:collapse;")
+                                                tbody 
+                                                        tr
+                                                                td(style="border:1px solid black;font-weight:bold;")
+                                                                td(style="border:1px solid black;font-weight:bold;") Player
+                                                                td(style="border:1px solid black;font-weight:bold;") G
+                                                                td(style="border:1px solid black;font-weight:bold;") PTS
+                                                                td(style="border:1px solid black;font-weight:bold;") REB
+                                                                td(style="border:1px solid black;font-weight:bold;") AST
+                                                                td(style="border:1px solid black;font-weight:bold;") 3P
+                                                                td(style="border:1px solid black;font-weight:bold;") STL
+                                                                td(style="border:1px solid black;font-weight:bold;") BLK
+                                                                td(style="border:1px solid black;font-weight:bold;") TO
+                                                                td(style="border:1px solid black;font-weight:bold;") FG%
+                                                                td(style="border:1px solid black;font-weight:bold;") FT%
+                                                                each prs in team.currentPeriodPlayerRangeSummaries
+                                                                        each game in prs.gameLog 
+                                                                                - gameLogCounter++;
+                                                                                tr(style=Number(game.gameScore) > 25 ? "background-color:rgba(0, 255, 0, 0.2);" : "")
+                                                                                        td(style="border:1px solid black;")= gameLogCounter
+                                                                                        td(style="border:1px solid black;")= prs.name
+                                                                                        td(style="border:1px solid black;")= game.gameDateString
+                                                                                        td(style="border:1px solid black;")= game.points
+                                                                                        td(style="border:1px solid black;")= game.rebounds
+                                                                                        td(style="border:1px solid black;")= game.assists
+                                                                                        td(style="border:1px solid black;")= game.threePointers
+                                                                                        td(style="border:1px solid black;")= game.steals
+                                                                                        td(style="border:1px solid black;")= game.blocks
+                                                                                        td(style="border:1px solid black;")= game.turnOvers
+                                                                                        if game.fieldGoalAttempts > 0
+                                                                                                td(style="border:1px solid black;")= ((game.fieldGoals / game.fieldGoalAttempts) * 100).toFixed(1) + "%"
+                                                                                        else 
+                                                                                                td(style="border:1px solid black;") -
+                                                                                        if game.freeThrowAttempts > 0
+                                                                                                td(style="border:1px solid black;")= ((game.freeThrows / game.freeThrowAttempts) * 100).toFixed(1) + "%"
+                                                                                        else 
+                                                                                                td(style="border:1px solid black;") -
+
+                                        //- END LAST 7 DAYS STARTERS
+
+                                        h4 Last 7 Days Substitution Log
+                                        if team.currentPeriodSubstitutedGames.length == 0
+                                                pre No games substituted in previous 7 days
+                                        else 
+                                                - var subLogCounter = 0
+                                                //- pre= JSON.stringify(team, null, 2)
+                                                table(style="border:1px solid black;border-collapse:collapse;")
+                                                        tbody 
+                                                                tr
+                                                                        td(style="border:1px solid black;font-weight:bold;")
+                                                                        td(style="border:1px solid black;font-weight:bold;") Missed Game
+                                                                        td(style="border:1px solid black;font-weight:bold;") Subbed Game
+                                                                        td(style="border:1px solid black;font-weight:bold;") PTS
+                                                                        td(style="border:1px solid black;font-weight:bold;") REB
+                                                                        td(style="border:1px solid black;font-weight:bold;") AST
+                                                                        td(style="border:1px solid black;font-weight:bold;") 3P
+                                                                        td(style="border:1px solid black;font-weight:bold;") STL
+                                                                        td(style="border:1px solid black;font-weight:bold;") BLK
+                                                                        td(style="border:1px solid black;font-weight:bold;") TO
+                                                                        td(style="border:1px solid black;font-weight:bold;") FG%
+                                                                        td(style="border:1px solid black;font-weight:bold;") FT%
+                                                                        each availableSubGame in team.currentPeriodSubstitutedGames
+                                                                                tr(style=Number(availableSubGame.playerGameLogEntry.gameScore) > 25 ? "background-color:rgba(0, 255, 0, 0.2);" : "")
+                                                                                        - var ft = availableSubGame.playerGameLogEntry.freeThrowAttempts > 0 ? ((availableSubGame.playerGameLogEntry.freeThrows / availableSubGame.playerGameLogEntry.freeThrowAttempts) * 100).toFixed(1) + "%" : "-";
+                                                                                        - var fg = availableSubGame.playerGameLogEntry.fieldGoalAttempts > 0 ? ((availableSubGame.playerGameLogEntry.fieldGoals / availableSubGame.playerGameLogEntry.fieldGoalAttempts) * 100).toFixed(1) + "%" : "-";
+                                                                                        - subLogCounter++
+
+                                                                                        td(style="border:1px solid black;")= subLogCounter
+                                                                                        td(style="border:1px solid black;")= availableSubGame.startingGameDateObject.format('MMM D') + " - " + availableSubGame.startingPlayerName
+                                                                                        td(style="border:1px solid black;")= availableSubGame.reserveGameDateObject.format('MMM D') + " - " + availableSubGame.reservePlayerName
+                                                                                        td(style="border:1px solid black;")= availableSubGame.playerGameLogEntry.points
+                                                                                        td(style="border:1px solid black;")= availableSubGame.playerGameLogEntry.rebounds
+                                                                                        td(style="border:1px solid black;")= availableSubGame.playerGameLogEntry.assists
+                                                                                        td(style="border:1px solid black;")= availableSubGame.playerGameLogEntry.threePointers
+                                                                                        td(style="border:1px solid black;")= availableSubGame.playerGameLogEntry.steals
+                                                                                        td(style="border:1px solid black;")= availableSubGame.playerGameLogEntry.blocks
+                                                                                        td(style="border:1px solid black;")= availableSubGame.playerGameLogEntry.turnOvers
+                                                                                        td(style="border:1px solid black;")= fg
+                                                                                        td(style="border:1px solid black;")= ft
+
+                                        div(style="padding-top:8px;")
+                                                img(src="cid:" + team.id + ".png", width="100%")
+                                        h4 Current Active Roster
+                                        table(style="border:1px solid black;border-collapse:collapse;")
+                                                tbody 
+                                                        tr
+                                                                td(colspan="12", align="center",style="border:1px solid black;font-weight:bold;") STARTERS
+                                                        tr
+                                                                td(style="border:1px solid black;font-weight:bold;") 
+                                                                td(style="border:1px solid black;font-weight:bold;") Player
+                                                                td(style="border:1px solid black;font-weight:bold;") G
+                                                                td(style="border:1px solid black;font-weight:bold;") PTS
+                                                                td(style="border:1px solid black;font-weight:bold;") REB
+                                                                td(style="border:1px solid black;font-weight:bold;") AST
+                                                                td(style="border:1px solid black;font-weight:bold;") 3P
+                                                                td(style="border:1px solid black;font-weight:bold;") STL
+                                                                td(style="border:1px solid black;font-weight:bold;") BLK
+                                                                td(style="border:1px solid black;font-weight:bold;") TO
+                                                                td(style="border:1px solid black;font-weight:bold;") FG%
+                                                                td(style="border:1px solid black;font-weight:bold;") FT%
+                                                                each pos in startingPositions 
+                                                                        tr 
+                                                                                td(style="border:1px solid black;")
+                                                                                        img(src="https://www.basketball-reference.com/req/202106291/images/players/" + team.currentActivePlayers[pos].bbrefId + ".jpg", height="46px", width="31px")
+                                                                                td(style="border:1px solid black;")= team.currentActivePlayers[pos].name
+                                                                                td(style="border:1px solid black;")= team.currentActivePlayers[pos].gameLog.length
+                                                                                td(style="border:1px solid black;")= team.currentActivePlayers[pos].stats.categoryAverages.points.toFixed(1)
+                                                                                td(style="border:1px solid black;")= team.currentActivePlayers[pos].stats.categoryAverages.rebounds.toFixed(1)
+                                                                                td(style="border:1px solid black;")= team.currentActivePlayers[pos].stats.categoryAverages.assists.toFixed(1)
+                                                                                td(style="border:1px solid black;")= team.currentActivePlayers[pos].stats.categoryAverages.threePointers.toFixed(1)
+                                                                                td(style="border:1px solid black;")= team.currentActivePlayers[pos].stats.categoryAverages.steals.toFixed(1)
+                                                                                td(style="border:1px solid black;")= team.currentActivePlayers[pos].stats.categoryAverages.blocks.toFixed(1)
+                                                                                td(style="border:1px solid black;")= team.currentActivePlayers[pos].stats.categoryAverages.turnOvers.toFixed(1)
+                                                                                if team.currentActivePlayers[pos].stats.categoryTotals.fieldGoalAttempts > 0
+                                                                                        td(style="border:1px solid black;")= ((team.currentActivePlayers[pos].stats.categoryTotals.fieldGoals / team.currentActivePlayers[pos].stats.categoryTotals.fieldGoalAttempts) * 100).toFixed(1) + "%"
+                                                                                else 
+                                                                                        td(style="border:1px solid black;") -
+                                                                                if team.currentActivePlayers[pos].stats.categoryTotals.freeThrowAttempts > 0
+                                                                                        td(style="border:1px solid black;")= ((team.currentActivePlayers[pos].stats.categoryTotals.freeThrows / team.currentActivePlayers[pos].stats.categoryTotals.freeThrowAttempts) * 100).toFixed(1) + "%"
+                                                                                else 
+                                                                                        td(style="border:1px solid black;") -
+                                                        tr
+                                                                td(colspan="12", align="center",style="border:1px solid black;font-weight:bold;") RESERVES
+                                                        tr
+                                                                td(style="border:1px solid black;font-weight:bold;")
+                                                                td(style="border:1px solid black;font-weight:bold;") Player
+                                                                td(style="border:1px solid black;font-weight:bold;") G
+                                                                td(style="border:1px solid black;font-weight:bold;") PTS
+                                                                td(style="border:1px solid black;font-weight:bold;") REB
+                                                                td(style="border:1px solid black;font-weight:bold;") AST
+                                                                td(style="border:1px solid black;font-weight:bold;") 3P
+                                                                td(style="border:1px solid black;font-weight:bold;") STL
+                                                                td(style="border:1px solid black;font-weight:bold;") BLK
+                                                                td(style="border:1px solid black;font-weight:bold;") TO
+                                                                td(style="border:1px solid black;font-weight:bold;") FG%
+                                                                td(style="border:1px solid black;font-weight:bold;") FT%
+                                                                each pos in reservePositions 
+                                                                        tr 
+                                                                                td(style="border:1px solid black;")
+                                                                                        img(src="https://www.basketball-reference.com/req/202106291/images/players/" + team.currentActivePlayers[pos].bbrefId + ".jpg", height="46px", width="31px")
+                                                                                td(style="border:1px solid black;")= team.currentActivePlayers[pos].name
+                                                                                td(style="border:1px solid black;")= team.currentActivePlayers[pos].gameLog.length
+                                                                                td(style="border:1px solid black;")= team.currentActivePlayers[pos].stats.categoryAverages.points.toFixed(1)
+                                                                                td(style="border:1px solid black;")= team.currentActivePlayers[pos].stats.categoryAverages.rebounds.toFixed(1)
+                                                                                td(style="border:1px solid black;")= team.currentActivePlayers[pos].stats.categoryAverages.assists.toFixed(1)
+                                                                                td(style="border:1px solid black;")= team.currentActivePlayers[pos].stats.categoryAverages.threePointers.toFixed(1)
+                                                                                td(style="border:1px solid black;")= team.currentActivePlayers[pos].stats.categoryAverages.steals.toFixed(1)
+                                                                                td(style="border:1px solid black;")= team.currentActivePlayers[pos].stats.categoryAverages.blocks.toFixed(1)
+                                                                                td(style="border:1px solid black;")= team.currentActivePlayers[pos].stats.categoryAverages.turnOvers.toFixed(1)
+                                                                                if team.currentActivePlayers[pos].stats.categoryTotals.fieldGoalAttempts > 0
+                                                                                        td(style="border:1px solid black;")= ((team.currentActivePlayers[pos].stats.categoryTotals.fieldGoals / team.currentActivePlayers[pos].stats.categoryTotals.fieldGoalAttempts) * 100).toFixed(1) + "%"
+                                                                                else 
+                                                                                        td(style="border:1px solid black;") -
+                                                                                if team.currentActivePlayers[pos].stats.categoryTotals.freeThrowAttempts > 0
+                                                                                        td(style="border:1px solid black;")= ((team.currentActivePlayers[pos].stats.categoryTotals.freeThrows / team.currentActivePlayers[pos].stats.categoryTotals.freeThrowAttempts) * 100).toFixed(1) + "%"
+                                                                                else 
+                                                                                        td(style="border:1px solid black;") -
